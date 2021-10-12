@@ -9,6 +9,11 @@
 	margin-bottom: 10px;
 }
 
+.lupa{
+	width: 18px;
+	margin-right: 5px;
+
+}
 .tituloppal{
 	margin-top: 10px;
 	text-align: right;
@@ -25,4 +30,14 @@
 	display: inline-block;
 	list-style: none;
 	padding: 5px;
+}
+.nav-link{
+	margin-right: 18px;
+}
+.bloquespacio{
+	margin-top: 35px;
+}
+.row{
+	margin-right: 25px;
+	margin-left: 25px;
 }
