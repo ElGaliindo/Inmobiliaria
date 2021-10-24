@@ -34,12 +34,12 @@
             <a class="nav-link active" aria-current="page" href="index.html"><img class="busca" src="img/esquema-del-boton-de-inicio-web.png"> Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><img class="busca" src="img/buscador-web.png"> Buscador</a>
+            <a class="nav-link" href="buscador.html"><img class="busca" src="img/buscador-web.png"> Buscador</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img class="busca" src="img/cliente.png"> Servicio al cliente</a>
             <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-              <li><a class="dropdown-item" href="login.html"><img class="busca" src="img/grupo.png"> Acerca de Nosotros</a></li>
+              <li><a class="dropdown-item" href="#"><img class="busca" src="img/grupo.png"> Acerca de Nosotros</a></li>
               <li><a class="dropdown-item" href="#"><img class="busca" src="img/acuerdo.png"> Normatividad</a></li>
               <li><a class="dropdown-item" href="#"><img class="busca" src="img/libreta-de-contactos.png"> Contactenos</a></li>
             </ul>
@@ -55,10 +55,42 @@
 </nav>
 
 
+  <div class="row g-2" id="cuad-ini">
+    <div class="col-md">
+      <div class="form-floating">
+          <input type="text" class="form-control" id="floatingInputGrid"  value="">
+          <label for="floatingInputGrid">Ubicación:</label>
+      </div>
+    </div>
+  <div class="col-md">
+      <div class="form-floating">
+          <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+            <option selected>TODOS </option>
+            <option value="1">CASA</option>
+            <option value="2">APARTAMENTO</option>
+            <option value="3">APARTAESTUDIO</option>
+            <option value="4">HABITACIÓN</option>
+            <option value="5">GARAJE</option>
+          </select>
+          <label for="floatingSelectGrid">Tipo de Inmueble</label>
+      </div>
+    </div>
 
+    <div class="col-md">
+      <div class="form-floating">
+          <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+        <option value="1">EN VENTA</option>
+        <option value="2">EN ARRIENDO</option>
+      </select>
+      <label for="floatingSelectGrid">Transacción</label>
+    </div>
+  </div>
 
+  <div class="col-1">
+    <button type="submit" class="btn btn-primary">BUSCAR</button>
+  </div>
 
-	<div class="bloquespacio"></div>
+</div>
 
 </body>
 </html>
