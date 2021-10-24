@@ -8,9 +8,9 @@
 }
  
 .tit {
+  font-size: 30px;
   font-family: 'Source Sans Pro', sans-serif;
   color: #fff;
-
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #10514a;
 }
@@ -27,9 +27,16 @@ nav{
 }
 
 .img-logo{
-  width: 60px;
+  width: 50px;
   margin-left: 5px;
 }
+
+.img-log{
+  width: 30px;
+  margin-top: -5px;
+  margin-left: 5px;
+}
+
 
 #cuad-ini{
 padding: 20px;
@@ -38,7 +45,57 @@ padding: 20px;
 }
 
 .busca{
+  margin-top:-5px;
   width: 20px;
 }
+
+.butn{
+  margin-right: 10px;
+}
+
+
+.ov-btn-slide-top {
+margin-top: 50px;
+margin-left: 140px;
+background: #fff;
+color: #c0c0c0;
+border: 2px solid #c0c0c0;
+padding: 10px 14px;
+border-radius: 3px;
+position: relative;
+z-index: 1;
+overflow: hidden;
+display: inline-block;
+text-decoration: none;
+}
+
+.ov-btn-slide-top:hover {
+color: #fff;
+border: 2px solid #10514a;
+}
+.ov-btn-slide-top::after {
+content: "";
+background: #10514a;
+position: absolute;
+z-index: -1;
+padding: 10px 14px;
+display: block;
+left: 0;
+right: 0;
+top: -100%;
+bottom: 100%;
+-webkit-transition: all 0.35s;
+transition: all 0.35s;
+}
+.ov-btn-slide-top:hover::after {
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+-webkit-transition: all 0.35s;
+transition: all 0.35s;
+}
+
+
 
 /* slider */
