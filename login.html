@@ -4,92 +4,85 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="estilos.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
 	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
 	<title>INMOBILIARIA LA VECINDAD</title>
 </head>
 <body>
-<nav class="navbar navbar-light bg-light fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.html"><img class="img-logo" src="img/logo2.png"></a>
+	<nav class="navbar navbar-light bg-light fixed-top">
+	  <div class="container-fluid">
+	    <a class="navbar-brand" href="index.html"><img class="img-logo" src="img/logo2.png"></a>
 
-    <div class="bg2">
-    	<h1 class="tit til" href="index.html">INMOBILIARIA LA VECINDAD</h1>	
-    </div>
-    
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img class="img-logo" src="img/logo2.png">INMOBILIARIA LA VECINDAD</h5>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Buscador</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Servicio al cliente
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-              <li><a class="dropdown-item" href="#">Acerca de Nosotros</a></li>
-              <li><a class="dropdown-item" href="#">Normatividad</a></li>
-              <li><a class="dropdown-item" href="#">Contactenos</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Publicar</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">Ingresar</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</nav>
+	    <div class="bg2">
+	    	<h1 class="tit til" href="index.html">INMOBILIARIA LA VECINDAD</h1>
+	    </div>
+	    <div class="butn">
+	      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    </div>
 
+	    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+	      <div class="offcanvas-header">
+	        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img class="img-log" src="img/logo2.png">INMOBILIARIA LA VECINDAD</h5>
+	        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+	      </div>
+	      <div class="offcanvas-body">
+	        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+	          <li class="nav-item">
+	            <a class="nav-link active" aria-current="page" href="index.html"><img class="busca" src="img/esquema-del-boton-de-inicio-web.png"> Inicio</a>
+	          </li>
+	          <li class="nav-item dropdown">
+	            <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img class="busca" src="img/cliente.png"> Servicio al cliente</a>
+	            <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+	              <li><a class="dropdown-item" href="#"><img class="busca" src="img/grupo.png"> Acerca de Nosotros</a></li>
+	              <li><a class="dropdown-item" href="#"><img class="busca" src="img/acuerdo.png"> Normatividad</a></li>
+	              <li><a class="dropdown-item" href="#"><img class="busca" src="img/libreta-de-contactos.png"> Contactenos</a></li>
+	            </ul>
+	          </li>
+	          <li class="nav-item">
+	            <a class="nav-link" href="#"><img class="busca" src="img/subir-archivo.png"> Publicar</a>
+	          </li>
+	        </ul>
+	        <a class="ov-btn-slide-top" href="login.html">Ingresar</a>
+	      </div>
+	    </div>
+	  </div>
+	</nav>
 
-
-	<div class="row" id="cuad-ini">
-
-		<div class="col-sm-6">
-    	<div class="card">
-      	<div class="card-body">
-        	<h5 class="card-title">Ingresar</h5>
-       
-        	<form>
-  					<div class="form-group">
-    					<label for="exampleInputEmail1">Email</label>
-    					<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  					</div>
-  					<br>
-  					<div class="form-group">
-    					<label for="exampleInputPassword1">Contraseña</label>
-    					<input type="password" class="form-control" id="exampleInputPassword1">
-  					</div>
-  					<br>
-  						<button type="submit" class="btn btn-primary">LOGIN</button>
-					</form>
+	<main>
+		<div class="contenedor__todo">
+				<div class="caja__trasera">
+						<div class="caja__trasera-login">
+								<h3>¿Ya tienes una cuenta?</h3>
+								<p>Inicia sesión para entrar en la página</p>
+								<button id="btn__iniciar-sesion">Iniciar Sesión</button>
+						</div>
+						<div class="caja__trasera-register">
+								<h3>¿Aún no tienes una cuenta?</h3>
+								<p>Regístrate para que puedas iniciar sesión</p>
+								<button id="btn__registrarse">Regístrarse</button>
+						</div>
 				</div>
-    	</div>
-  	</div>
+				<div class="contenedor__login-register">
+						<form action="" class="formulario__login">
+								<h2>Iniciar Sesión</h2>
+								<input type="text" name="Email" placeholder="Correo Electronico">
+								<input type="password" name="contraseña" placeholder="Contraseña">
+								<button>Entrar</button>
+						</form>
+						<form action="" class="formulario__register">
+								<h2>Regístrarse</h2>
+								<input type="text" name="nombre" placeholder="Nombre completo">
+								<input type="text" name="Email" placeholder="Correo Electronico">
+								<input type="text" name="usuario" placeholder="Usuario">
+								<input type="password" name="contraseña" placeholder="Contraseña">
+								<button>Regístrarse</button>
+						</form>
+				</div>
+		</div>
+</main>
 
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Registrate</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-</div>
-
+<script type="text/javascript" src="js/code.js"></script>
 </body>
 </html>
