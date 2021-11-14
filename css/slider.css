@@ -24,7 +24,7 @@ transition: 1s ease;
 .box h2{
   text-align: center;
   margin-top: 20PX;
-  font-size: 23PX;
+  font-size: 21PX;
 }
 .box p{
   font-size: 16px;
@@ -51,4 +51,5 @@ transition: 1s ease;
 
 .tit-por  h3{
   font-size: 23px;
+  color: #808080;
 }

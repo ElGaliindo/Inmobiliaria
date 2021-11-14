@@ -10,7 +10,7 @@
 .tit {
   font-size: 30px;
   font-family: 'Source Sans Pro', sans-serif;
-  color: #fff;
+  color: transparent;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #10514a;
 }
@@ -60,8 +60,7 @@ transition: all 0.3s cubic-bezier(.25,.8,.25,1)
 .tit-bus {
   letter-spacing: .15em;
   text-align: center;
-  color: #004d4d;
-  font-size: 40px;
+  font-size: 50px;
   font-weight: bold;
   margin-top: 40px;
 }
