@@ -1,0 +1,38 @@
+.form_pub{
+  width: 50%;
+  margin: 10%;
+  margin-left: 26%;
+  padding: 50px;
+  border-radius:25px;
+  background-color: #e6e6e6;
+  color: #737373;
+}
+
+.form_pub label{
+  border-bottom: 1px solid #ccc;
+  width: 99%;
+}
+
+.form_pub img{
+  width: 40px;
+  margin-top: -5px;
+}
+
+.form_pub h2{
+  font-family: 'Arial', sans-serif;
+  color: #595959;
+}
+
+.sec-tap{
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.btn-form{
+  margin-left: 10%;
+}
+
+.btn-form button{
+  width: 120px;
+}
