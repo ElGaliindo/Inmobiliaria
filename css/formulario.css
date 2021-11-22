@@ -36,3 +36,7 @@
 .btn-form button{
   width: 120px;
 }
+
+#file-preview-zone{
+  width: 5000px;
+}

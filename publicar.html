@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="estilos.css">
 	<link rel="stylesheet" type="text/css" href="css/formulario.css">
 	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
 	<title></title>
 </head>
 <body>
@@ -53,22 +54,22 @@
 	</nav>
 
 	<div class="form_pub">
-		<form>
+		<form action="conexion.php" method="post" enctype="multipart/form-data">
 			<h2><img src="img/usuario.png" alt=""> Datos personales</h2><br>
 			<div class="sec-tap">
 					<div class="mb-3">
 			    	<label for="" class="form-label">Nombre</label>
-			    	<input type="text" class="form-control" id="">
+			    	<input type="text" class="form-control" name="Nombre">
 			  	</div>
 
 			  	<div class="mb-3">
 				    <label for="" class="form-label">Correo Electronico</label>
-				    <input type="email" class="form-control" id="" >
+				    <input type="email" class="form-control" name="email" >
 				 </div>
 
 				 <div class="mb-3">
 				    <label for="" class="form-label">Télefono</label>
-				    <input type="tel" class="form-control" id="" >
+				    <input type="tel" class="form-control" name="telefono" >
 				</div>
 			</div>
 			<br>
@@ -76,20 +77,20 @@
 			<div class="sec-tap">
 				<div class="mb-3">
 					<label for="" class="form-label">Tipo de oferta</label>
-					<select class="form-select" aria-label="Default select example">
+					<select class="form-select" name="oferta">
 					  <option selected>Seleccione una opción</option>
-					  <option value="1">Venta</option>
-					  <option value="2">Arriendo</option>
+					  <option value="Venta" >Venta</option>
+					  <option value="Arriendo">Arriendo</option>
 					</select>
 				</div>
 
 				<div class="mb-3">
 					<label for="" class="form-label">Tipo de inmueble</label>
-					<select class="form-select" aria-label="Default select example">
+					<select class="form-select" name="inmueble">
 					  <option selected>Seleccione una opción</option>
-					  <option value="1">Casa</option>
-					  <option value="2">Apartamento</option>
-					  <option value="3">Apartaestudio</option>
+					  <option value="Casa">Casa</option>
+					  <option value="Apartamento">Apartamento</option>
+					  <option value="Apartaestudio">Apartaestudio</option>
 					</select>
 				</div>
 			</div>
@@ -98,17 +99,17 @@
 			<div class="sec-tap">
 				<div class="mb-3">
 				    <label for="" class="form-label">Ciudad / Municipio</label>
-				    <input type="text" class="form-control" id="" >
+				    <input type="text" class="form-control" name="ubicacion" >
 				</div>
 
 				<div class="mb-3">
 				    <label for="" class="form-label">Barrio</label>
-				    <input type="text" class="form-control" id="" >
+				    <input type="text" class="form-control" name="barrio" >
 				</div>
 
 				<div class="mb-3">
 				    <label for="" class="form-label">Dirección</label>
-				    <input type="text" class="form-control" id="" >
+				    <input type="text" class="form-control" name="direccion" >
 				</div>
 			</div>
 			<br>
@@ -117,17 +118,12 @@
 			<div class="sec-tap">
 				<div class="mb-3">
 				    <label for="" class="form-label">Precio</label>
-				    <input type="number" class="form-control" id="" >
-				</div>
-
-				<div class="mb-3">
-				    <label for="" class="form-label">Barrio</label>
-				    <input type="text" class="form-control" id="" >
+				    <input type="number" class="form-control" name="precio" >
 				</div>
 
 				<div class="mb-3">
 					<label for="" class="form-label">Estrato</label>
-					<select class="form-select" aria-label="Default select example">
+					<select class="form-select" name="estrato">
 					  <option selected>Seleccione una opción</option>
 					  <option value="1">1</option>
 					  <option value="2">2</option>
@@ -140,49 +136,82 @@
 
 				<div class="mb-3">
 				    <label for="" class="form-label">Área(m²)</label>
-				    <input type="text" class="form-control" id="" >
+				    <input type="text" class="form-control" name="area" >
 				</div>
 
 				<div class="mb-3">
-				    <label for="" class="form-label">Habitaciones</label>
-				    <input type="number" class="form-control" id="" >
+				    <label for="" class="form-label">Ambientes</label>
+				    <input type="number" class="form-control" name="ambientes" >
 				</div>
 
 				<div class="mb-3">
 				    <label for="" class="form-label">Número de habitaciones</label>
-				    <input type="number" class="form-control" id="" >
+				    <input type="number" class="form-control" name="num_habita" >
 				</div>
 
 				<div class="mb-3">
 				    <label for="" class="form-label">Número de baños</label>
-				    <input type="number" class="form-control" id="" >
+				    <input type="number" class="form-control" name="baños" >
 				</div>
 
 				<div class="mb-3">
 				    <label for="" class="form-label">Pisos inferirores</label>
-				    <input type="number" class="form-control" id="" >
+				    <input type="number" class="form-control" name="pisos" >
 				</div>
 
 				<div class="mb-3">
 					<label for="" style="margin-bottom: 8px;">Estado del inmueble</label>
 
-					<select class="form-select" multiple aria-label="multiple select example">
+					<select class="form-select" multiple name="estado">
 					  <option value="1">No espesificado</option>
 					  <option value="2">Bueno</option>
 					  <option value="3">Excelente</option>
 						<option value="4">Remodelar</option>
 					</select>
 			</div>
+
+			<div class="mb-3">
+			  <label for="formFile" class="form-label">Suba las imagenes del inmueble</label>
+			  <input class="form-control" type="file" name="arch" id="file-upload"  accept="image/*" multiple>
+				<p style="font-size: 12px;  text-align: center;">Seleccione de una vez todas las imagenes que necesite</p>
+			</div>
+
+			<div id="file-preview-zone">
+				<script type="text/javascript" s>
+
+				function readFile(input) {
+			 if (input.files && input.files[0]) {
+					 var reader = new FileReader();
+
+					 reader.onload = function (e) {
+							 var filePreview = document.createElement('img');
+							 filePreview.id = 'file-preview';
+							 filePreview.src = e.target.result;
+							 console.log(e.target.result);
+
+							 var previewZone = document.getElementById('file-preview-zone');
+							 previewZone.appendChild(filePreview);
+					 }
+
+					 reader.readAsDataURL(input.files[0]);
+			 }
+	 }
+
+	 var fileUpload = document.getElementById('file-upload');
+	 fileUpload.onchange = function (e) {
+			 readFile(e.srcElement);
+	 }
+
+				</script>
+			</div>
+
 		</div>
 		<br>
 		<div class="mb-3 btn-form">
-			<button type="submit" name="button" class="btn btn-secondary">Enviar</button>
+			<input type="submit" name="enviar" id="enviar" value="enviar" class="btn btn-secondary">
 		</div>
-
 		</form>
 	</div>
-
-
 
 </body>
 </html>
