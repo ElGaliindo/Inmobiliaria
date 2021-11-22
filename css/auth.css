@@ -112,10 +112,10 @@ main{
     outline: none;
 }
 
-.contenedor__login-register form button{
-    padding: 10px 40px;
+.contenedor__login-register form #enviar{
+    width: 200px;
     margin-top: 40px;
-    margin-left: 100px;
+    margin-left: 60px;
     border: none;
     border-radius: 3px;
     font-size: 14px;
@@ -126,7 +126,7 @@ main{
     outline: none;
 }
 
-.contenedor__login-register form button:hover{
+.contenedor__login-register form #enviar:hover{
   background: #404040;
   color: #fff;
 }

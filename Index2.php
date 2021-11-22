@@ -1,4 +1,9 @@
+<?php
+session_start();
 
+if ($_SESSION['login']!='') {
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,6 +25,11 @@
     <div class="bg2">
     	<h1 class="tit til" onclick="location.href='index.html'" style="cursor: pointer;">INM8BILIARIA LA VECINDAD</h1>
     </div>
+
+		<div class="">
+			<b>Bienvenido <?php echo $_SESSION['login']?></b>
+
+		</div>
 
     <div class="butn">
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -45,11 +55,20 @@
               <li><a class="dropdown-item" href="#"><img class="busca" src="img/libreta-de-contactos.png"> Contactenos</a></li>
             </ul>
           </li>
+					<div class="">
+						<li>
+							<?php
+							if($_SESSION['login'] == 'admin@gmail.com') {
+								echo "<a class='nav-link' href='principal.php'><img class='busca' src='img/panel.png'> Panel</a>";
+							}
+							 ?>
+						</li>
+					</div>
           <li class="nav-item">
             <a class="nav-link" href="publicar.html"><img class="busca" src="img/subir-archivo.png"> Publicar</a>
           </li>
         </ul>
-        <a class="ov-btn-slide-top" href="login.html">Ingresar</a>
+        <a class="ov-btn-slide-top" href="cerrar.php">Cerrrar sesión</a>
       </div>
     </div>
   </div>
@@ -128,3 +147,9 @@
 
 </body>
 </html>
+
+<?php
+}else{
+	header("Location:index.html");
+}
+ ?>

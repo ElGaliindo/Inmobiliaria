@@ -54,22 +54,22 @@
 	</nav>
 
 	<div class="form_pub">
-		<form action="conexion.php" method="post" enctype="multipart/form-data">
+		<form action="conexion.php" method="post" enctype="multipart/form-data" autocomplete="off">
 			<h2><img src="img/usuario.png" alt=""> Datos personales</h2><br>
 			<div class="sec-tap">
 					<div class="mb-3">
 			    	<label for="" class="form-label">Nombre</label>
-			    	<input type="text" class="form-control" name="Nombre">
+			    	<input type="text" class="form-control" name="Nombre" required>
 			  	</div>
 
 			  	<div class="mb-3">
 				    <label for="" class="form-label">Correo Electronico</label>
-				    <input type="email" class="form-control" name="email" >
+				    <input type="email" class="form-control" name="email" required>
 				 </div>
 
 				 <div class="mb-3">
 				    <label for="" class="form-label">Télefono</label>
-				    <input type="tel" class="form-control" name="telefono" >
+				    <input type="tel" class="form-control" name="telefono" required>
 				</div>
 			</div>
 			<br>
@@ -77,7 +77,7 @@
 			<div class="sec-tap">
 				<div class="mb-3">
 					<label for="" class="form-label">Tipo de oferta</label>
-					<select class="form-select" name="oferta">
+					<select class="form-select" name="oferta" required>
 					  <option selected>Seleccione una opción</option>
 					  <option value="Venta" >Venta</option>
 					  <option value="Arriendo">Arriendo</option>
@@ -86,7 +86,7 @@
 
 				<div class="mb-3">
 					<label for="" class="form-label">Tipo de inmueble</label>
-					<select class="form-select" name="inmueble">
+					<select class="form-select" name="inmueble" required>
 					  <option selected>Seleccione una opción</option>
 					  <option value="Casa">Casa</option>
 					  <option value="Apartamento">Apartamento</option>
@@ -99,17 +99,17 @@
 			<div class="sec-tap">
 				<div class="mb-3">
 				    <label for="" class="form-label">Ciudad / Municipio</label>
-				    <input type="text" class="form-control" name="ubicacion" >
+				    <input type="text" class="form-control" name="ubicacion" required>
 				</div>
 
 				<div class="mb-3">
 				    <label for="" class="form-label">Barrio</label>
-				    <input type="text" class="form-control" name="barrio" >
+				    <input type="text" class="form-control" name="barrio" required>
 				</div>
 
 				<div class="mb-3">
 				    <label for="" class="form-label">Dirección</label>
-				    <input type="text" class="form-control" name="direccion" >
+				    <input type="text" class="form-control" name="direccion" required>
 				</div>
 			</div>
 			<br>
@@ -118,12 +118,12 @@
 			<div class="sec-tap">
 				<div class="mb-3">
 				    <label for="" class="form-label">Precio</label>
-				    <input type="number" class="form-control" name="precio" >
+				    <input type="number" class="form-control" name="precio" required>
 				</div>
 
 				<div class="mb-3">
 					<label for="" class="form-label">Estrato</label>
-					<select class="form-select" name="estrato">
+					<select class="form-select" name="estrato" required>
 					  <option selected>Seleccione una opción</option>
 					  <option value="1">1</option>
 					  <option value="2">2</option>
@@ -136,33 +136,33 @@
 
 				<div class="mb-3">
 				    <label for="" class="form-label">Área(m²)</label>
-				    <input type="text" class="form-control" name="area" >
+				    <input type="text" class="form-control" name="area" required>
 				</div>
 
 				<div class="mb-3">
 				    <label for="" class="form-label">Ambientes</label>
-				    <input type="number" class="form-control" name="ambientes" >
+				    <input type="number" class="form-control" name="ambientes" required>
 				</div>
 
 				<div class="mb-3">
 				    <label for="" class="form-label">Número de habitaciones</label>
-				    <input type="number" class="form-control" name="num_habita" >
+				    <input type="number" class="form-control" name="num_habita" required>
 				</div>
 
 				<div class="mb-3">
 				    <label for="" class="form-label">Número de baños</label>
-				    <input type="number" class="form-control" name="baños" >
+				    <input type="number" class="form-control" name="baños" required>
 				</div>
 
 				<div class="mb-3">
 				    <label for="" class="form-label">Pisos inferirores</label>
-				    <input type="number" class="form-control" name="pisos" >
+				    <input type="number" class="form-control" name="pisos" required>
 				</div>
 
 				<div class="mb-3">
 					<label for="" style="margin-bottom: 8px;">Estado del inmueble</label>
 
-					<select class="form-select" multiple name="estado">
+					<select class="form-select" multiple name="estado" required>
 					  <option value="1">No espesificado</option>
 					  <option value="2">Bueno</option>
 					  <option value="3">Excelente</option>
@@ -172,7 +172,7 @@
 
 			<div class="mb-3">
 			  <label for="formFile" class="form-label">Suba las imagenes del inmueble</label>
-			  <input class="form-control" type="file" name="arch" id="file-upload"  accept="image/*" multiple>
+			  <input class="form-control" type="file" name="arch" id="file-upload"  accept="image/*" multiple required>
 				<p style="font-size: 12px;  text-align: center;">Seleccione de una vez todas las imagenes que necesite</p>
 			</div>
 
