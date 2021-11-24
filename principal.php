@@ -1,63 +1,64 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <title></title>
-  </head>
-  <body>
-
-<div class="tabla">
-
-  <style media="screen">
-  .tabla{
-    width: 80%;
-    margin: 120px;
-  }
-  </style>
-
-    <table class="table table-dark table-striped">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Nombre</th>
-          <th scope="col">Email</th>
-          <th scope="col">Telefono</th>
-          <th scope="col">Direccion</th>
-          <th scope="col">Eliminar</th>
-          <th scope="col">modificar</th>
-        </tr>
-      </thead>
-
-    <?php
-
-    $conexion = new mysqli("localhost", "Root", "admin", "inmobiliaria");
-    if ($conexion->connect_error) {
-        echo "Fallo al conectar a MySQL: (" . $conexion->connect_error . ") " . $conexion->connect_error;
-    }
-
-    $qry = "SELECT * FROM formulario";
-    $result = $conexion->query($qry);
-    while($row=$result->fetch_assoc()){
-
-     ?>
-
-  <tbody>
-    <tr>
-      <td><?php echo $row['id']; ?></td>
-      <td><?php echo $row['Nombre']; ?></td>
-      <td><?php echo $row['email']; ?></td>
-      <td><?php echo $row['telefono']; ?></td>
-      <td><?php echo $row['direccion']; ?></td>
-      <td><a href="modificar.php?id=<?php echo $row['id']; ?>">Modificar</a></td>
-      <td><a href="eliminar.php?id=<?php echo $row['id']; ?>">Eliminar</a></td>
-    </tr>
-  </tbody>
-</table>
+<html lang="es">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<script src="js/bootstrap.min.js"></script>
+	</head>
 
 <?php
+$conexion = new mysqli("localhost", "Root", "admin", "inmobiliaria");
+if ($conexion->connect_errno) {
+    echo "Fallo al conectar a MySQL: (" . $conexion->connect_errno . ") " . $conexion->connect_error;
 }
- ?>
-</div>
-  </body>
+
+
+	$where = "";
+
+	if(!empty($_POST))
+	{
+		$valor = $_POST['campo'];
+		if(!empty($valor)){
+			$where = "WHERE nombre LIKE '%$valor'";
+		}
+	}
+	$sql = "SELECT * FROM formulario $where";
+	$resultado = $conexion->query($sql);
+
+?>
+
+
+	<body>
+
+
+			<div class="row table-responsive">
+				<table  class="table table-dark table-striped">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Nombre</th>
+							<th>Email</th>
+							<th>Telefono</th>
+              <th>Direccion</th>
+							<th>Modificar</th>
+							<th>Eliminar</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<?php while($row = $resultado->fetch_assoc()) { ?>
+							<tr>
+								<td><?php echo $row['id']; ?></td>
+								<td><?php echo $row['Nombre']; ?></td>
+								<td><?php echo $row['email']; ?></td>
+								<td><?php echo $row['telefono']; ?></td>
+                <td><?php echo $row['direccion']; ?></td>
+								<td><a href="#modificar.php?id=<?php echo $row['id']; ?>">Modificar</a></td>
+								<td><a href="#" data-href="eliminar.php?id=<?php echo $row['id']; ?>" data-toggle="modal" data-target="#confirm-delete">Eliminar</a></td>
+							</tr>
+						<?php } ?>
+					</tbody>
+				</table>
+			</div>
+
+	</body>
 </html>
