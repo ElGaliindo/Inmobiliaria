@@ -1,0 +1,48 @@
+.img-ico{
+  width: 25px;
+}
+
+.container{
+  margin-top: 80px;
+  padding: 20px;
+}
+
+.volver{
+  margin: 10px;
+}
+
+.volver img{
+  width: 50px;
+}
+
+th{
+  text-align: center;
+}
+
+td{
+  text-align: center;
+}
+
+/*op2*/
+
+.prin{
+  width: 40%;
+  margin: 10%;
+  margin-top: 4%;
+  margin-left: 30%;
+  border: 1px solid #c0c0c0;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.prin img{
+  width: 50px;
+}
+
+h3{
+  text-align: center;
+}
+
+.bot{
+  margin-left: 30%;
+}

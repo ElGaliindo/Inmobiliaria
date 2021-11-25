@@ -1,8 +1,5 @@
 <?php
-$conexion = new mysqli("localhost", "Root", "admin", "inmobiliaria");
-if ($conexion->connect_errno) {
-    echo "Fallo al conectar a MySQL: (" . $conexion->connect_errno . ") " . $conexion->connect_error;
-}
+	require 'conex.php';
 
 	$id = $_GET['id'];
 
@@ -15,49 +12,42 @@ if ($conexion->connect_errno) {
 	<head>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/modal.css">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+		<link href="css/bootstrap-theme.css" rel="stylesheet">
+		<script src="js/jquery-3.1.1.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 	</head>
 
 	<body>
-		<div class="container">
-			<div class="row">
-				<h3 style="text-align:center">MODIFICAR REGISTRO</h3>
-			</div>
+		<div class="prin">
 
-			<form class="form-horizontal" method="POST" action="ope_modificar.php" autocomplete="off">
-				<div class="form-group">
+				<h3><img src="img/escritura.png"> MODIFICAR REGISTRO</h3>
+
+			<form  method="POST" action="ope_modificar.php" autocomplete="off">
+				<div class="mb-3">
 					<label for="nombre" class="col-sm-2 control-label">Nombre</label>
-					<div class="col-sm-10">
 						<input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Nombre" value="<?php echo $row['Nombre']; ?>" required>
-					</div>
 				</div>
 
 				<input type="hidden" id="id" name="id" value="<?php echo $row['id']; ?>" />
 
-				<div class="form-group">
+				<div class="mb-3">
 					<label for="email" class="col-sm-2 control-label">Email</label>
-					<div class="col-sm-10">
 						<input type="email" class="form-control" id="email" name="email" placeholder="Email" value="<?php echo $row['email']; ?>"  required>
-					</div>
 				</div>
 
-				<div class="form-group">
+				<div class="mb-3">
 					<label for="telefono" class="col-sm-2 control-label">Telefono</label>
-					<div class="col-sm-10">
 						<input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Telefono" value="<?php echo $row['telefono']; ?>" >
-					</div>
 				</div>
 
-        <div class="form-group">
-					<label for="telefono" class="col-sm-2 control-label">Direccion</label>
-					<div class="col-sm-10">
-						<input type="text" class="form-control" id="direccion" name="direccion" placeholder="direccion" value="<?php echo $row['direccion']; ?>" >
-					</div>
+        <div class="mb-3">
+					<label for="email" class="col-sm-2 control-label">Direccion</label>
+						<input type="text" class="form-control" id="direccion" name="direccion" placeholder="Direccion" value="<?php echo $row['direccion']; ?>"  required>
 				</div>
-
-				<div class="form-group">
+        <br>
+				<div class="form-group bot">
 					<div class="col-sm-offset-2 col-sm-10">
 						<a href="principal.php" class="btn btn-default">Regresar</a>
 						<button type="submit" class="btn btn-primary">Guardar</button>
