@@ -49,8 +49,8 @@
         <br>
 				<div class="form-group bot">
 					<div class="col-sm-offset-2 col-sm-10">
-						<a href="principal.php" class="btn btn-default">Regresar</a>
-						<button type="submit" class="btn btn-primary">Guardar</button>
+						<a href="principal.php" class="btn btn-secondary">Regresar</a>
+						<button type="submit" class="btn btn-success">Guardar</button>
 					</div>
 				</div>
 			</form>

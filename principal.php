@@ -63,7 +63,7 @@
 								<td><?php echo $row['telefono']; ?></td>
 								<td><?php echo $row['direccion']; ?></td>
 								<td><a href="modificar.php?id=<?php echo $row['id']; ?>"><img class="img-ico" src="img/editar.png"></a></td>
-								<td><a href="#" data-href="eliminar.php?id=<?php echo $row['id']; ?>" data-toggle="modal" data-target="#confirm-delete"><img class="img-ico" src="img/eliminar.png"></a></td>
+								<td><a href="eliminar.php?id=<?php echo $row['id']; ?>" data-toggle="modal" data-target="#confirm-delete"><img class="img-ico" src="img/eliminar.png"></a></td>
 							</tr>
 						<?php } ?>
 					</tbody>
@@ -71,35 +71,7 @@
 			</div>
 		</div>
 
-		<!-- Modal -->
-		<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
 
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h4 class="modal-title" id="myModalLabel">Eliminar Registro</h4>
-					</div>
-
-					<div class="modal-body">
-						¿Desea eliminar este registro?
-					</div>
-
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-						<a class="btn btn-danger btn-ok">Delete</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<script>
-			$('#confirm-delete').on('show.bs.modal', function(e) {
-				$(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
-
-				$('.debug-url').html('Delete URL: <strong>' + $(this).find('.btn-ok').attr('href') + '</strong>');
-			});
-		</script>
 
 	</body>
 </html>
