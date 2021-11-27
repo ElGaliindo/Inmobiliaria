@@ -1,0 +1,119 @@
+.row {
+  max-width: 600px;
+
+}
+
+.cardt {
+  border-radius: 10px;
+  margin-top: 80px;
+  float: left;
+  padding: 0 1.7rem;
+  width: 50%;
+}
+
+
+.cardt .wrapper {
+  background-color: #fff;
+  min-height: 400px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+}
+.cardt .wrapper:hover .data {
+  transform: translateY(0);
+}
+.cardt .data {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(calc(70px + 1em));
+  transition: transform 0.3s;
+}
+.cardt .data .content {
+  padding: 1em;
+  position: relative;
+  z-index: 1;
+}
+.cardt .author {
+  font-size: 12px;
+}
+.cardt .title {
+  margin-top: 10px;
+}
+.cardt .text {
+  height: 70px;
+  margin: 0;
+}
+.cardt input[type=checkbox] {
+  display: none;
+}
+.cardt input[type=checkbox]:checked + .menu-content {
+  transform: translateY(-60px);
+}
+
+.example-2 .wrapper img{
+ height: 400px;
+}
+.example-2 .wrapper:hover .menu-content span {
+  transform: translate(-50%, -10px);
+  opacity: 1;
+}
+.example-2 .header {
+  color: #fff;
+  padding: 1em;
+}
+.example-2 .header::before, .example-2 .header::after {
+  content: "";
+  display: table;
+}
+.example-2 .header::after {
+  clear: both;
+}
+.example-2 .header .date {
+  float: left;
+  font-size: 12px;
+}
+.example-2 .menu-content {
+  float: right;
+}
+.example-2 .menu-content li {
+  margin: 0 5px;
+  position: relative;
+}
+.example-2 .menu-content span {
+  transition: all 0.3s;
+  color: #fff;
+  opacity: 0;
+}
+.example-2 .data {
+  color: #fff;
+  transform: translateY(calc(70px + 4em));
+}
+.example-2 .title a {
+  color: #fff;
+  text-decoration: none;
+}
+.example-2 .button {
+  display: block;
+  width: 100px;
+  margin: 2em auto 1em;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  line-height: 1;
+  position: relative;
+  font-weight: 700;
+}
+.example-2 .button::after {
+  content: "→";
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  transition: all 0.3s;
+}
+.example-2 .button:hover::after {
+  transform: translate(5px, -50%);
+  opacity: 1;
+}
